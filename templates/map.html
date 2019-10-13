@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MASS Heatmap</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/map.css') }}">
+  </head>
+  <body>
+    <div id='map' style='height:100vh;'></div>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoiYXJ0aGRldiIsImEiOiJjazFueDIycmUwZ2I0M2hxYnNydnVrZDJvIn0.o4gU0oKOKFVH6zc-aTApIg';
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/satellite-streets-v11'
+      });
+    </script>
+    <script src="/static/map.js" charset="utf-8"></script>
+
+
+  </body>
+</html>

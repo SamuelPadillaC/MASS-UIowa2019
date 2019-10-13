@@ -1,0 +1,29 @@
+body {
+  /* background-image: url("https://cdn1.imggmi.com/uploads/2019/10/13/7e336d225d55852b0c4a8c227db1d59e-full.jpg"); */
+  /* background-position: 50% 50%; */
+  background-size: cover;
+  /* background-repeat: repeat; */
+}
+
+
+
+.container {
+  text-align: center;
+  /* background-color: blue; */
+}
+
+#search {
+  left-margin: 50px;
+}
+
+.box-content{
+    margin: auto;
+    top: 0;
+    right: 0;
+    /* bottom: 0; */
+    left: 0;
+    position: absolute;
+    width: 800px;
+    height: 100px;
+    /* color: blue; */
+}

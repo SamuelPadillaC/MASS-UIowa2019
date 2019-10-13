@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mass Finder</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <!-- <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+    <!-- <script src="{{ url_for('static', filename='js/index.js') }}" charset="utf-8"></script> -->
+  </head>
+  <body>
+
+    <div class="box-content">
+      <div class="container">
+        <!-- title TODO:add typewriter to title for [keyword, brand, friend, wife]-->
+        <div id="title">
+          <h1 class="mdl-title">Find out what others think about:</h1>
+        </div>
+        <!-- input fields -->
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" id="keyword_input">
+          <label class="mdl-textfield__label" for="keyword">Enter your keyword...</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" id="date_input">
+          <label class="mdl-textfield__label" for="keyword">Enter date range</label>
+        </div>
+
+        <!-- search button -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="search">
+          Search
+        </button>
+
+      </div>
+    </div>
+
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}" charset="utf-8"></script>
+  </body>
+</html>
