@@ -38,5 +38,8 @@ def formatForML(input_data_path, output_data_path):
 	with open(output_data_path, 'a') as f:
 		json.dump(mydict, f)
 
+	resultingJSON = json.loads(output_data_path)
+	return resultingJSON
+
 	
 
