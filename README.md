@@ -4,7 +4,7 @@ This is a web application that defines the perception of an entity in a specific
 # Requirements
 pip install tweepy
 
-#Description
+# Description
 This is a web app that collects data about what people are saying on twitter 
 about a keyword and uses machine learning to understand whether or 
 not it's positive
