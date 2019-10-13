@@ -1,0 +1,3 @@
+MAPBOX_ACCESS_TOKEN="pk.eyJ1IjoiYXJ0aGRldiIsImEiOiJjazFueDIycmUwZ2I0M2hxYnNydnVrZDJvIn0.o4gU0oKOKFVH6zc-aTApIg"
+
+# new secret token with all permissions given sk.eyJ1IjoiYXJ0aGRldiIsImEiOiJjazFvZ2k0OGswbTV0M2VwazlybmUyc3piIn0.Wu-2XqtnHq_qaTwyRx34-Q

@@ -1,4 +1,3 @@
-#variables that will hold the twitter tokens
 ACCESS_TOKEN = "1183152724998791168-lSGpJhp95e93Wx3vUWAkahYyfzZqMT"
 ACCESS_TOKEN_SECRET = "3G3z4GrSdSeOleGBqwys2KHy1tnek1604NZd21A3HG2em"
 CONSUMER_KEY = "lqobrUDlBQsxVXCVn9CGc3gMx"
