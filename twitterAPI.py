@@ -3,6 +3,7 @@
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
+import time
 
 import twitter_credentials
 
@@ -23,6 +24,7 @@ class TwitterStreamer():
 
         # This line filter Twitter Streams to capture data by the keywords: 
         stream.filter(track=hash_tag_list)
+        
 
 
 # # # # TWITTER STREAM LISTENER # # # #
@@ -30,19 +32,24 @@ class StdOutListener(StreamListener):
     """
     This is a basic listener that just prints received tweets to stdout.
     """
-    def __init__(self, fetched_tweets_filename):
+    def __init__(self, fetched_tweets_filename, time_limit=15):
+        self.start_time = time.time()
+        self.limit = time_limit
         self.fetched_tweets_filename = fetched_tweets_filename
+        super(StdOutListener, self).__init__()
 
     def on_data(self, data):
-        try:
-            print(data)
-            with open(self.fetched_tweets_filename, 'a') as tf:
-                tf.write(data)
+        if (time.time() - self.start_time) < self.limit:
+            try:
+                print(data)
+                with open(self.fetched_tweets_filename, 'a') as tf:
+                    tf.write(data)
+                return True
+            except BaseException as e:
+                print("Error on_data %s" % str(e))
             return True
-        except BaseException as e:
-            print("Error on_data %s" % str(e))
-        return True
-          
+        else:
+            return False
 
     def on_error(self, status):
         print(status)
@@ -52,7 +59,8 @@ if __name__ == '__main__':
  
     # Authenticate using config.py and connect to Twitter Streaming API.
     hash_tag_list = ["barack obama", "bernie sanders"]
-    fetched_tweets_filename = "tweet.json"
+    fetched_tweets_filename = "tweets.json"
 
     twitter_streamer = TwitterStreamer()
     twitter_streamer.stream_tweets(fetched_tweets_filename, hash_tag_list)
+    
