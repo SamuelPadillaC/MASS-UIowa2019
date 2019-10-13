@@ -4,7 +4,7 @@ import json
 #dictionary to be saved in JSON at the end
 mydict = {}
 
-#change the jason file name
+#change the jason file name - data_path
 data_path = "dummy.json"
 output_file = "output1.json"
 
@@ -13,10 +13,8 @@ with open(data_path, "r") as data_file:
 
 #iterate over attributes
 for element in data:
-	print(element)
 	if 'id' in element:
-		print(type(element))
-		#save the id value to dictionary
+	#save the id value to dictionary
 		mydict["id"] = data['id']
 
 	if "text" in element:
@@ -24,8 +22,6 @@ for element in data:
 
 	if "user" in element:
 		for ind, a in enumerate(data[element]):
-			print(a)
-			print(ind)
 			if "location" in a:
 				
 				mydict["loc"] = data[element][a]
